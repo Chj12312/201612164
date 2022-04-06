@@ -1,46 +1,47 @@
 #include <iostream>
-#include <math.h>
+
 using namespace std;
 
-int main()
-{
-	int a, b,c ;
-	int answer = 0;
 
-	cin >> a >> b;
-	cout << "정수1 : " << a << endl;
-	cout << "정수2 : " << b << endl;
-	cout << "***************" << endl;
-	
-	
-	
-	
-	
-	
-	cout << a << "**" << b << " = " << pow(a,b) << "\n";
 
-	c = pow(a, b);
-	while (c >= 1)
-	{
-		answer = answer + c % 10;
-		c = c / 10;
+int main() {
 
 
 
-		
+	int size[6][2] = { 1,2,-4,2,-2,8,5,3,11,0,5,-3 };
+
+	int i, j, k;
+
+	double mid1 = 0;
+
+	double sum1 = 0;
+
+	double mid2 = 0;
+
+	double sum2 = 0;
+
+
+
+
+
+	for (int i = 0;i < 6;i++) {
+
+		sum1 += size[i][0];
+
+		mid1 = sum1 / 6;
 
 	}
 
+	for (int j = 0;j < 6;j++) {
 
+		sum2 += size[j][1];
 
-	cout << "자릿수 합 : " << answer;
-	
+		mid2 = sum2 / 6;
 
+	}
 
-
-
-
-
+	cout << "중점은(" << mid1 << ", " << mid2 << ") 이다." << endl;
 
 
 }
+
